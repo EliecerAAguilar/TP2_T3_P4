@@ -1,6 +1,7 @@
 import geopandas as gp
 import psycopg2 as pg2
 
+
 def main():
     try:
         con = pg2.connect(
@@ -17,9 +18,11 @@ def main():
         df.plot()
         cursor.close()
         con.close()
+
     except Exception as error:
         print(error.args)
 
 
 if __name__ == "__main__":
     main()
+
